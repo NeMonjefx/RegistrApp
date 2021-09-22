@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registro de Usuario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registrarse</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Duoc<span id="uc-span">UC </span> <span id="register-span">RegisterApp</span></strong>
+  </div>
+
+  <ion-grid id="login">
+    <ion-row>
+      <ion-col>
+        <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
+          <ion-item>
+            <ion-label color ="primary" position="floating">Nombre de Usuario</ion-label>
+            <ion-input formControlName="nombre"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label  color="primary" position="floating">Contraseña</ion-label>
+            <ion-input formControlName="contraseña" type="password" ></ion-input>
+          </ion-item>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  <div id="botones">
+    <ion-button color="warning" (click)="guardar()">Registrarse <ion-icon class="icons" name="arrow-forward"></ion-icon></ion-button>
+    <ion-button color="danger" href="home"> <ion-icon class="icons" name="arrow-back"></ion-icon> Volver</ion-button>
+
+  </div>
+  
+
+</ion-content>
